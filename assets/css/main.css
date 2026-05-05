@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-family: 'Stack Sans Notch';
+    color: rgb(223, 107, 126);
+    font-size: 50px;
+
+}
+
+.basic{
+    bottom: 20px;
+    margin-bottom: 50px;
+    border-radius: 50px;
+    font-size: 20px;
+    background-color: rgb(255, 183, 195);
+    color: white;
+    font-family:'Elms Sans';
+
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: pink;
+    background-color: white;
+}
+
+img{
+    width: 300px;
+    height: 220px;
+    border: 5px dashed pink;
+
+}
+
+.wrap {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+header {
+    background-color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 5px solid pink;
+    top: 0;
+    z-index: 100;
+}
+
+.nav {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav a {
+    text-decoration: none;
+    position: relative;
+    background-color: white;
+    color: pink;
+    font-weight: bold;
+    border: 1px solid pink; 
+    padding: 5px 15px;  /* 5px arriba, 15px abajo*/
+    border-radius: 20px;
+    font-size: 0.9rem;
+
+
+}
+
+.nav a:hover {
+   background-color: pink;
+   color: white;
+   transform: scale(1.1);
+
+}
+
+section {
+    background: rgb(223, 107, 126);
+    color: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+
+.dife{
+    color: pink;
+}
+
+h2 {
+
+    border-bottom: 2px solid pink;
+    margin-bottom: 15px;
+    text-transform: uppercase; /* texto en mayuscula auto*/
+    font-size: 1.2rem;
+}
+
+
+.lista {
+    list-style: none;
+}
+
+.contacto {
+    background: white;
+    color: pink;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.contacto a {
+    color: rgb(196, 148, 156);
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+
+@media (min-width: 768px) {
+    .layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    .nav {
+        justify-content: center;
+    }
+
+    .contacto {
+        height: fit-content;
+        position: sticky; 
+        top: 120px;
+    }
+}
