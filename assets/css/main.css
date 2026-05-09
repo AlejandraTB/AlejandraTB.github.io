@@ -5,7 +5,7 @@
 }
 
 h1{
-    font-family: 'Stack Sans Notch';
+    font-family: 'Sour Gummy';
     color: rgb(223, 107, 126);
     font-size: 50px;
 
@@ -19,6 +19,8 @@ h1{
     background-color: rgb(255, 183, 195);
     color: white;
     font-family:'Elms Sans';
+    box-shadow: 8px 8px 0px rgb(255, 153, 174);
+    border: 2px solid rgb(255, 255, 255);
 
 }
 
@@ -81,14 +83,14 @@ header {
 }
 
 section {
-    background: rgb(223, 107, 126);
+    background:  rgb(255, 183, 195);
     color: white;
     margin: 20px 0;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 8px 8px 0px rgb(255, 153, 174); 
+    border: 2px solid white; 
 }
-
 
 .dife{
     color: pink;
@@ -111,6 +113,8 @@ h2 {
     background: white;
     color: pink;
     padding: 20px;
+    box-shadow: 8px 8px 0px rgb(255, 183, 195);
+    border: 2px solid rgb(255, 183, 195);
     border-radius: 8px;
     margin-top: 20px;
 }
@@ -126,6 +130,98 @@ footer {
     font-size: 1.2rem;
 }
 
+/* Contenedor que cubre toda la pantalla */
+.stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Se queda detrás de tus secciones */
+    background-color: rgb(255, 255, 255); /* O el color de fondo que prefieras */
+    overflow: hidden;
+}
+.star {
+    /* Mantenemos tu diseño de bordes */
+    width: 0;
+    height: 0;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid pink;
+    border-left: 100px solid transparent;
+    transform: rotate(35deg);
+
+    position: absolute; 
+    z-index: -1;        
+    
+    filter: blur(4px);  
+    opacity: 0.5;       
+}
+
+.star::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -45px;
+    left: -65px;
+    border-bottom: 80px solid pink;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    transform: rotate(-35deg);
+}
+
+.star::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 3px;
+    left: -105px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid pink;
+    border-left: 100px solid transparent;
+    transform: rotate(-70deg);
+}
+
+
+.star:nth-child(1) {
+    top: 10%;
+    left: 5%;
+    transform: rotate(10deg) scale(0.5); 
+}
+
+.star:nth-child(2) {
+    top: 40%;
+    right: 10%;
+    transform: rotate(45deg) scale(0.8);
+}
+
+.star:nth-child(3) {
+    bottom: 15%;
+    left: 20%;
+    transform: rotate(-20deg) scale(0.4);
+}
+
+.star:nth-child(4) {
+    bottom: 15%;
+    top: 90%;
+    left: 3%;
+    transform: rotate(-20deg) scale(0.4);
+}
+
+.star:nth-child(5) {
+    bottom: 15%;
+    top: 90%;
+    right: 20%;
+    transform: rotate(-50deg) scale(0.4);
+}
+
+.star:nth-child(6) {
+    bottom: 15%;
+    top: 80%;
+    right: 3%;
+    transform: rotate(-50deg) scale(0.4);
+}
 
 @media (min-width: 768px) {
     .layout {
@@ -145,7 +241,6 @@ footer {
 
     .contacto {
         height: fit-content;
-        position: sticky; 
         top: 120px;
     }
 }
